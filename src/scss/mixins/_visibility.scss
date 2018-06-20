@@ -1,0 +1,69 @@
+// https://github.com/h5bp/html5-boilerplate/blob/6.1.0/src/css/main.css
+/*
+ * Hide visually and from screen readers
+ */
+@mixin hidden {
+  display: none !important;
+}
+.hidden {
+  @include hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+// renamed from 'visuallyhidden'
+@mixin sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap; /* 1 */
+}
+.sr-only {
+  @include sr-only;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+// renamed from '.visuallyhidden.focusable'
+@mixin sr-only-focusable {
+  &:active,
+  &:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+  }
+}
+.sr-only-focusable {
+  @include sr-only-focusable;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+@mixin invisible {
+  visibility: hidden;
+}
+.invisible {
+  @include invisible;
+}

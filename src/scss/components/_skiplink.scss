@@ -1,0 +1,15 @@
+.skiplink {
+  @include sr-only;
+  @include sr-only-focusable;
+  &:active,
+  &:focus {
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    z-index: 9999;
+    padding: .2em;
+    font-weight: 600;
+    color: $link-color;
+    background-color: $skiplink-bg;
+  }
+}
