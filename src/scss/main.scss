@@ -5,7 +5,7 @@
 */
 
 @import "variables";
-//@import "vendor/normalize"; -- in Bootstrap (now reboot)
+@import "vendor/normalize";
 @import "mixins/utils";
 @import "mixins/lists";
 @import "mixins/links";
@@ -13,7 +13,7 @@
 @import "mixins/buttons";
 
 @import "base/defaults";
-//@import "base/type"; -- Bootstrap
+@import "base/type";
 //@import "base/forms"; -- Bootstrap
 
 @import "components/containers";
