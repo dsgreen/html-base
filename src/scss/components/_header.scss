@@ -1,23 +1,23 @@
 .site-header {
-  padding-top: 1.5em;
-  padding-bottom: 1em;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   background-color: $header-bg-color;
 
   .brand {
     margin: 0;
     padding: 0;
-  }
-  // text only styles for .brand, no logo
-  /* .brand {
-    font-size: 36px;
-    font-weight: bold;
-    letter-spacing: -.04em;
+    // text only styles for .brand, no logo
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: .05em;
     text-transform: uppercase;
     @include link-color($dark-gray, $accent);
-  } */
+  }
   .logo {
     width: 220px;
     height: auto;
   }
-
+  //.container {
+  //  padding: 0 2rem;
+  //}
 }

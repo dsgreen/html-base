@@ -1,46 +1,75 @@
 .main-navigation {
   ul {
     @include list-nostyle;
+    @include margin-none;
     text-align: center;
   }
   li {
     padding-top: 2.25em;
-    font-size: 13px;
-    font-weight: 600;
+    font-size: 1.3rem;
+    font-weight: 400;
     text-transform: uppercase;
+    letter-spacing: .03em;
+    &.active a {
+      color: $main-nav-hover;
+    }
   }
   a {
     padding: .7em 1em;
     color: $main-nav-color;
+    text-decoration: none;
     &:hover,
     &:focus {
-      //color: $main-nav-hover;
-      text-decoration: none;
+      color: $main-nav-hover;
     }
+  }
+}
+// navigation item with button styling
+.main-nav-btn a {
+  color: $main-nav-color;
+  border: .2rem solid $main-nav-color;
+  border-radius: .3em;
+  &:focus,
+  &:hover {
+    color: #fff;
+    background-color: $main-nav-color;
   }
 }
 // nav toggle button and mobile only adjustments
 @media (max-width: 767px) {
   .nav-toggle {
     position: absolute;
-    top: 2.25em;
-    right: 1em;
+    top: 2.25rem;
+    right: 2rem;
     display: block;
-    width: 5em;
+    width: 2.75rem;
     text-align: center;
     cursor: pointer;
   }
   .nav-toggle-text {
     display: inline-block;
-    font-size: 12px;
+    font-size: 1.2rem;
     font-weight: 600;
     text-transform: uppercase;
+    @include sr-only;
   }
-  .nav-toggle .fa-bars {
-    display: inline-block;
+  .nav-toggle .bar {
+    margin-bottom: .8rem;
+    height: .2rem;
+    width: 100%;
+    background-color: $main-nav-color;
+    display: block;
+    transition: background-color .2s ease;
   }
+  .nav-toggle:hover,
+  .nav-toggle:focus {
+    .bar {
+      background-color: $main-nav-hover;
+    }
+  }
+
   .main-navigation ul {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
   }
 }
 // tablet and up, header & nav styles
