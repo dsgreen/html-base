@@ -1,0 +1,39 @@
+body {
+  font-family: $sans;
+  color: $copy-color;
+  background-color: $page-bg-color;
+}
+/* headings, other
+h1, h2, h3, h4, h5, h6,
+th,
+th a,
+legend {
+  color: $heading-color;
+}*/
+
+// links, buttons
+a,
+a:link,
+a:active,
+a:visited {
+  color: $link-color;
+}
+a:hover,
+a:focus {
+  color: $link-hover;
+}
+a,
+.cta,
+.btn {
+  transition: all .2s ease;
+}
+
+/*
+ * Remove text-shadow in selection highlight: HTML5 Boilerplate
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::selection {
+  background: $extra-light-gray;
+  text-shadow: none;
+}

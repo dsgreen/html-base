@@ -1,0 +1,31 @@
+{
+  "name": "project-boilerplate",
+  "version": "1.0.0",
+  "description": "Basic HTML and CSS boilerplate.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dsgreen/project-boilerplate.git"
+  },
+  "author": "Douglas Green",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dsgreen/project-boilerplate/issues"
+  },
+  "homepage": "https://github.com/dsgreen/project-boilerplate#readme",
+  "devDependencies": {
+    "bootstrap": "^4.1.0",
+    "grunt": "^1.0.2",
+    "grunt-contrib-uglify": "^3.3.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  },
+  "dependencies": {
+    "grunt-browser-sync": "^2.2.0"
+  }
+}

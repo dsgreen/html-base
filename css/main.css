@@ -1,0 +1,387 @@
+/*
+
+  Project Boilerplate
+
+*/
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700");
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #2e2e2e;
+  background-color: #eaeaea;
+}
+
+/* headings, other
+h1, h2, h3, h4, h5, h6,
+th,
+th a,
+legend {
+  color: $heading-color;
+}*/
+a,
+a:link,
+a:active,
+a:visited {
+  color: #0000cd;
+}
+
+a:hover,
+a:focus {
+  color: #1b1bff;
+}
+
+a,
+.cta,
+.btn {
+  transition: all .2s ease;
+}
+
+/*
+ * Remove text-shadow in selection highlight: HTML5 Boilerplate
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::selection {
+  background: #eaeaea;
+  text-shadow: none;
+}
+
+.container-fluid {
+  max-width: 1200px;
+}
+
+.wrap-inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site-header {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  background-color: #fff;
+  /* .brand {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    @include link-color($dark-gray, $accent);
+  } */
+}
+
+.site-header .brand {
+  margin: 0;
+  padding: 0;
+}
+
+.site-header .logo {
+  width: 220px;
+  height: auto;
+}
+
+body {
+  padding-top: 77px;
+}
+
+.site-header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+}
+
+.site-footer {
+  padding-top: 1.6em;
+  padding-bottom: 1em;
+  color: #2e2e2e;
+  background-color: #fff;
+}
+
+.main-navigation ul {
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.main-navigation li {
+  padding-top: 2.25em;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.main-navigation a {
+  padding: .7em 1em;
+  color: #2e2e2e;
+}
+
+.main-navigation a:hover, .main-navigation a:focus {
+  text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  .nav-toggle {
+    position: absolute;
+    top: 2.25em;
+    right: 1em;
+    display: block;
+    width: 5em;
+    text-align: center;
+    cursor: pointer;
+  }
+  .nav-toggle-text {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .nav-toggle .fa-bars {
+    display: inline-block;
+  }
+  .main-navigation ul {
+    margin-bottom: 1.5em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .brand {
+    float: left;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .main-navigation {
+    float: right;
+  }
+  .main-navigation ul {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+    margin-bottom: 0;
+  }
+  .main-navigation ul > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .main-navigation li {
+    padding-top: 0;
+  }
+}
+
+.cta,
+.cta-inverse {
+  display: inline-block;
+  padding: .7em 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: .4em;
+}
+
+.cta:hover, .cta:focus,
+.cta-inverse:hover,
+.cta-inverse:focus {
+  text-decoration: none;
+}
+
+.cta,
+a.cta {
+  color: #fff;
+  background-color: #2e2e2e;
+  border: solid 0.2em #2e2e2e;
+}
+
+.cta .fa,
+a.cta .fa {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.cta:hover, .cta:focus,
+a.cta:hover,
+a.cta:focus {
+  background-color: #3b3b3b;
+  border-color: #3b3b3b;
+}
+
+.cta:hover .fa, .cta:focus .fa,
+a.cta:hover .fa,
+a.cta:focus .fa {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta-inverse,
+a.cta-inverse {
+  color: #2e2e2e;
+  border: solid 0.2em #2e2e2e;
+}
+
+.cta-inverse .fa,
+a.cta-inverse .fa {
+  color: rgba(46, 46, 46, 0.6);
+}
+
+.cta-inverse:hover, .cta-inverse:focus,
+a.cta-inverse:hover,
+a.cta-inverse:focus {
+  color: #3b3b3b;
+  border-color: #3b3b3b;
+}
+
+.cta-inverse:hover .fa, .cta-inverse:focus .fa,
+a.cta-inverse:hover .fa,
+a.cta-inverse:focus .fa {
+  color: rgba(46, 46, 46, 0.7);
+}
+
+a.cta.alt {
+  color: #fff;
+  background-color: #32cd32;
+  border-color: #32cd32;
+}
+
+a.cta.alt .fa {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+a.cta.alt:hover, a.cta.alt:focus {
+  color: #fff;
+  background-color: #47d247;
+  border-color: #47d247;
+}
+
+a.cta.alt:hover .fa, a.cta.alt:focus .fa {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cta.wide {
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.hero {
+  width: 100%;
+  height: auto;
+}
+
+.hero {
+  padding-top: 8em;
+  min-height: 400px;
+  background-color: #d3d3d3;
+}
+
+.hero-inner {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.full-width {
+  width: 100%;
+  height: auto;
+}
+
+.fw-primary,
+.fw-alt {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #fff;
+}
+
+.fw-alt {
+  background-color: #d3d3d3;
+}
+
+.fw-highlight {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  color: #fff;
+  background-color: #32cd32;
+}
+
+.fw-highlight h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.fw-highlight p {
+  font-size: 18px;
+}
+
+.home .hero {
+  background-image: url("../images/hero.jpg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.home .hero h1 {
+  font-weight: 700;
+  color: #fff;
+}
+
+.home .hero p {
+  margin-bottom: 1em;
+  font-size: 18px;
+  color: #fff;
+}
+
+.home .hero .cta {
+  color: white;
+  background-color: #32cd32;
+  border-color: #32cd32;
+}
+
+.home .hero .cta .fa {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.home .hero .cta:hover, .home .hero .cta:focus {
+  color: white;
+  background-color: #47d247;
+  border-color: #47d247;
+}
+
+.home .hero .cta:hover .fa, .home .hero .cta:focus .fa {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.home .hero .cta-inverse {
+  color: white;
+  border-color: #32cd32;
+}
+
+.home .hero .cta-inverse .fa {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.home .hero .cta-inverse:hover, .home .hero .cta-inverse:focus {
+  color: white;
+  border-color: #47d247;
+}
+
+.home .hero .cta-inverse:hover .fa, .home .hero .cta-inverse:focus .fa {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 500px) {
+  .home .hero {
+    padding-top: 3.5em;
+    min-height: 350px;
+  }
+}
+
+.fw-primary h2,
+.fw-alt h2,
+.fw-highlight h2 {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.fw-primary p,
+.fw-alt p,
+.fw-highlight p {
+  font-size: 16px;
+}
+
+.fw-highlight h2 {
+  font-weight: 500;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,23 @@
+.site-header {
+  padding-top: 1.5em;
+  padding-bottom: 1em;
+  background-color: $header-bg-color;
+
+  .brand {
+    margin: 0;
+    padding: 0;
+  }
+  // text only styles for .brand, no logo
+  /* .brand {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: -.04em;
+    text-transform: uppercase;
+    @include link-color($dark-gray, $accent);
+  } */
+  .logo {
+    width: 220px;
+    height: auto;
+  }
+
+}

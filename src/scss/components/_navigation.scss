@@ -1,0 +1,64 @@
+.main-navigation {
+  ul {
+    @include list-nostyle;
+    text-align: center;
+  }
+  li {
+    padding-top: 2.25em;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  a {
+    padding: .7em 1em;
+    color: $main-nav-color;
+    &:hover,
+    &:focus {
+      //color: $main-nav-hover;
+      text-decoration: none;
+    }
+  }
+}
+// nav toggle button and mobile only adjustments
+@media (max-width: 767px) {
+  .nav-toggle {
+    position: absolute;
+    top: 2.25em;
+    right: 1em;
+    display: block;
+    width: 5em;
+    text-align: center;
+    cursor: pointer;
+  }
+  .nav-toggle-text {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .nav-toggle .fa-bars {
+    display: inline-block;
+  }
+  .main-navigation ul {
+    margin-bottom: 1.5em;
+  }
+}
+// tablet and up, header & nav styles
+@media screen and (min-width: 768px) {
+  .brand {
+    float: left;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .main-navigation {
+    float: right;
+    ul {
+      @include list-inline;
+      margin-bottom: 0;
+    }
+    li {
+      padding-top: 0;
+    }
+  }
+}

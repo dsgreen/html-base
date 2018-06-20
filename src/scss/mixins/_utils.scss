@@ -1,0 +1,16 @@
+@mixin clearfix {
+  &:before {
+    display: table;
+    content: " ";
+  }
+  &:after {
+    display: table;
+    content: " ";
+    clear: both;
+  }
+}
+@mixin img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

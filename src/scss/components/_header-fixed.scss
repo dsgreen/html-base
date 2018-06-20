@@ -1,0 +1,11 @@
+body {
+  // top padding for fixed header
+  padding-top: 77px;
+}
+// fixed header
+.site-header {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+}

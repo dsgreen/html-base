@@ -1,0 +1,15 @@
+@mixin link-color($link-color, $link-hover: null, $hover-bg-color: null, $underline: none, $underline-on-hover: none) {
+  color: $link-color;
+  text-decoration: $underline;
+  &:link,
+  &:active,
+  &:visited {
+    color: $link-color;
+  }
+  &:hover,
+  &:focus {
+    color: $link-hover;
+    background-color: $hover-bg-color;
+    text-decoration: $underline-on-hover;
+  }
+}

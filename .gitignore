@@ -1,0 +1,22 @@
+# Workflow
+_dev/
+node_modules/
+*.map
+
+# ignore *.min.* files during development
+# included *.min.* files for distribution
+#/css/main.css
+#/js/main.js
+/css/main.min.css
+/js/main.min.js
+
+# Server
+# ...
+
+# WordPress
+# ...
+
+# Exclude images and binaries
+images
+fonts
+# ...

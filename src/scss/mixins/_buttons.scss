@@ -1,0 +1,32 @@
+@mixin cta-color-override($txt-color, $bg-color) {
+  color: $txt-color;
+  background-color: $bg-color;
+  border-color: $bg-color;
+  .fa {
+    color: rgba($txt-color,.6);
+  }
+  &:hover,
+  &:focus {
+    color: $txt-color;
+    background-color: lighten($bg-color, 5%);
+    border-color: lighten($bg-color, 5%);
+    .fa {
+      color: rgba($txt-color,.7);
+    }
+  }
+}
+@mixin cta-inv-color-override($txt-color, $bdr-color) {
+  color: $txt-color;
+  border-color: $bdr-color;
+  .fa {
+    color: rgba($txt-color,.6);
+  }
+  &:hover,
+  &:focus {
+    color: lighten($txt-color, 5%);
+    border-color: lighten($bdr-color, 5%);
+    .fa {
+      color: rgba($txt-color,.7);
+    }
+  }
+}

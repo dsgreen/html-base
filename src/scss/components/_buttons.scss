@@ -1,0 +1,54 @@
+// buttons
+// if you want to bypass Bootstrap .btn and make your own
+.cta,
+.cta-inverse {
+  display: inline-block;
+  padding: .7em 1em;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: .4em;
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+.cta,
+a.cta {
+  color: $cta-txt-color;
+  background-color: $cta-bg-color;
+  border: solid .2em $cta-bg-color;
+  .fa {
+    color: rgba($cta-txt-color,.6);
+  }
+  &:hover,
+  &:focus {
+    background-color: lighten($cta-bg-color, 5%);
+    border-color: lighten($cta-bg-color, 5%);
+    .fa {
+      color: rgba($cta-txt-color,.7);
+    }
+  }
+}
+.cta-inverse,
+a.cta-inverse {
+  color: $cta-inverse-txt-color;
+  border: solid .2em $cta-inverse-border-color;
+  .fa {
+    color: rgba($cta-inverse-txt-color,.6);
+  }
+  &:hover,
+  &:focus {
+    color: lighten($cta-inverse-txt-color, 5%);
+    border-color: lighten($cta-inverse-border-color, 5%);
+    .fa {
+      color: rgba($cta-inverse-txt-color,.7);
+    }
+  }
+}
+a.cta.alt {
+  @include cta-color-override($cta-txt-color, $accent);
+}
+.cta.wide {
+  padding-left: 2em;
+  padding-right: 2em;
+}

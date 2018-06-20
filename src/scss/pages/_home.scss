@@ -1,0 +1,43 @@
+// home page styles
+.home .hero {
+  @include hero-bg-img('../images/hero.jpg');
+  h1 {
+    font-weight: 700;
+    color: #fff;
+  }
+  p {
+    margin-bottom: 1em;
+    font-size: 18px;
+    color: #fff;
+  }
+  .cta {
+    @include cta-color-override(white, $accent);
+  }
+  .cta-inverse {
+    @include cta-inv-color-override(white, $accent);
+  }
+}
+// mobile
+@media screen and (max-width: 500px) {
+  .home .hero {
+    padding-top: 3.5em;
+    min-height: 350px;
+  }
+}
+// full-width sections
+.fw-primary,
+.fw-alt,
+.fw-highlight {
+  h2 {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  p {
+    font-size: 16px;
+  }
+}
+.fw-highlight {
+  h2 {
+    font-weight: 500;
+  }
+}
