@@ -4,42 +4,50 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Boilerplate</title>
+  <title>HTML Base</title>
   <meta name="description" content="">
   <meta name="author" content="Douglas Green">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <!-- icon fonts -->
   <link href="css/main.css" rel="stylesheet">
   <script src="js/modernizr.custom.07230.js"></script>
   <!-- webfonts -->
   <!-- analytics -->
 </head>
 <body class="example">
-<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+<a class="skiplink" href="#content">Skip to main content</a>
 
 <header class="site-header" id="top" role="banner">
-  <div class="container-fluid">
+  <div class="container">
     <a href="index.html" class="brand">
-      <!--Your Company-->
-      <img src="images/your-logo.svg" class="logo" alt="Logo">
+      HTML Base
+      <!--<img src="images/your-logo.svg" class="logo" alt="Logo">-->
     </a>
     <span class="nav-toggle">
-        <span class="nav-toggle-text">Menu</span> <span class="fa fa-bars"></span>
-      </span>
+      <span class="nav-toggle-text">Menu</span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </span>
     <nav class="main-navigation" role="navigation">
       <ul>
         <li><a href="index.html">Nav Link</a></li>
         <li><a href="index.html">Nav Link</a></li>
-        <li><a href="index.html" class="cta">Nav Link</a></li>
-        <li><a href="index.html" class="cta-inverse">Nav Link</a></li>
+        <li><a href="index.html">Nav Link</a></li>
+        <li class="main-nav-btn"><a href="index.html">Nav Link</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<section class="container-fluid" id="content">
+<section class="container" id="content">
   <div class="row">
     <main class="col-md-9" id="main" role="main">
+
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec,
+        auctor quis, purus. Vivamus ut sem. Fusce aliquam nunc vitae purus. Aenean viverra malesuada libero. Fusce ac
+        quam. Donec neque. Nunc venenatis enim nec quam. Cras faucibus, justo vel accumsan aliquam, tellus dui fringilla
+        quam, in condimentum augue lorem non tellus.
+
       <h1>Heading 1</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget,
         tristique nec, auctor quis, purus. Vivamus ut sem. Fusce aliquam nunc vitae purus. Aenean viverra malesuada
@@ -65,7 +73,12 @@
         quam, in condimentum augue lorem non tellus. </p>
 
       <h5>Heading 5</h5>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec,
+        auctor quis, purus. Vivamus ut sem. </p>
+
       <h6>Heading 6</h6>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec,
+        auctor quis, purus. Vivamus ut sem. </p>
 
       <h2>Lists</h2>
       <h3>Unordered list</h3>
@@ -106,6 +119,9 @@
         <li>list item</li>
         <li>list item</li>
       </ol>
+
+      <p>A rule.</p>
+      <hr>
 
       <h3>Description list</h3>
       <dl>
@@ -296,8 +312,6 @@
 </footer>
 
 <script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
 <script src="js/jquery.scrollTo.min.js"></script>
 <script src="js/jquery.localScroll.min.js"></script>
 <script src="js/main.js"></script>
