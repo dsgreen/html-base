@@ -1,16 +1,30 @@
 @mixin clearfix {
-  &:before {
+  &:before,
+  &:after {
     display: table;
     content: " ";
   }
   &:after {
-    display: table;
-    content: " ";
     clear: both;
   }
 }
+.clearfix {
+  @include clearfix;
+}
+
 @mixin img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.img-responsive {
+  @include img-responsive;
+}
+
+// presentational
+@mixin margin-none {
+  margin: 0;
+}
+.margin-none {
+  @include margin-none;
 }

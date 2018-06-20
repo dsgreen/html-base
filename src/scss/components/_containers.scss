@@ -1,5 +1,8 @@
-.container-fluid {
+.container {
   max-width: $max-container-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 2rem;
 }
 // use to manage the width inside a container
 .wrap-inner {
