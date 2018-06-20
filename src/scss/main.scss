@@ -11,6 +11,7 @@
 @import "mixins/links";
 @import "mixins/hero";
 @import "mixins/buttons";
+@import "mixins/visibility";
 
 @import "base/defaults";
 @import "base/type";
@@ -23,6 +24,7 @@
 @import "components/footer";
 @import "components/navigation";
 @import "components/buttons";
+@import "components/skiplink";
 @import "components/hero";
 @import "components/full-width";
 //@import 'components/grid'; -- Bootstrap
