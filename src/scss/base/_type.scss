@@ -75,6 +75,9 @@ h5,
 h6 {
   margin-bottom: .25em;
 }
+h6 {
+  margin-top: .5em;
+}
 p,
 dd,
 address,
@@ -115,7 +118,7 @@ td {
 }
 td {
   text-align: center;
-  border-bottom: 0.1rem solid #eaeaea;
+  border-bottom: 0.1em solid #eaeaea;
 }
 
 // other

@@ -3,13 +3,14 @@ body {
   color: $copy-color;
   background-color: $page-bg-color;
 }
-/* headings, other
+
+// headings, other
 h1, h2, h3, h4, h5, h6,
 th,
-th a,
+//th a,
 legend {
   color: $heading-color;
-}*/
+}
 
 // links, buttons
 a,
@@ -28,6 +29,7 @@ a,
   transition: all .2s ease;
 }
 
+// https://github.com/h5bp/html5-boilerplate/blob/6.1.0/src/css/main.css
 /*
  * Remove text-shadow in selection highlight: HTML5 Boilerplate
  * These selection declarations have to be separate.
@@ -36,4 +38,46 @@ a,
 ::selection {
   background: $extra-light-gray;
   text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: .1rem;
+  border: 0;
+  border-top: .1rem solid $light-medium-gray;
+  margin: 1em 0;
+  padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles (and Normalize padding).
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical;
 }
