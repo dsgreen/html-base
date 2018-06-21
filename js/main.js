@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+    $(".main-navigation").removeClass("hidden");
     if (window.innerWidth < 768) {
         $(".main-navigation").hide();
     }

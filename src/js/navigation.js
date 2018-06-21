@@ -4,6 +4,9 @@
 
 jQuery(document).ready(function($) {
 
+  // hidden class added for better loading at mobile (expanded menu is not shown as it loads)
+  $('.main-navigation').removeClass('hidden');
+
   // 1st page load
   if (window.innerWidth < 768) {
     $('.main-navigation').hide();

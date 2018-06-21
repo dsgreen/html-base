@@ -1,3 +1,11 @@
+// if no js, menu will be hidden - need to override
+.no-js .main-navigation.hidden {
+  display: block !important;
+}
+// don't need nav toggle if no js
+.no-js .nav-toggle {
+  display: none;
+}
 .main-navigation {
   ul {
     @include list-nostyle;
