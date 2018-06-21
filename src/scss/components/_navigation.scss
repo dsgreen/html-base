@@ -53,6 +53,18 @@
     width: 2.75rem;
     text-align: center;
     cursor: pointer;
+    // adjustments for button element
+    background: none;
+    border: none;
+    padding: 0;
+    // default outline looks bad, try to improve without ruining accessibility
+    // ideally for keyboard only, not mouse selection
+    // applies to chrome, and ...?
+    //&:focus,
+    //&:active {
+    //  outline: none;
+    //  border: .1rem inset dotted $light-gray;
+    //}
   }
   .nav-toggle-text {
     display: inline-block;
