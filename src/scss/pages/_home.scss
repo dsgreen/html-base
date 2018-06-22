@@ -2,26 +2,33 @@
 .home .hero {
   @include hero-bg-img('../images/hero.jpg');
   h1 {
-    font-weight: 700;
+    text-transform: uppercase;
     color: #fff;
   }
   p {
-    margin-bottom: 1em;
-    font-size: 18px;
     color: #fff;
   }
-  .cta {
-    @include cta-color-override(white, $accent);
+  .btn {
+    @include btn-color-override($copy-color, $accent);
+    font-weight: 600;
+    letter-spacing: .02em;
   }
-  .cta-inverse {
-    @include cta-inv-color-override(white, $accent);
+  .btn-inverse {
+    @include btn-inv-color-override($accent, $accent);
   }
 }
 // mobile
 @media screen and (max-width: 500px) {
   .home .hero {
     padding-top: 3.5em;
-    min-height: 350px;
+    padding-bottom: 6em;
+    h1 {
+      font-size: 3rem;
+    }
+    .btn,
+    .btn-inverse {
+      font-size: 1.3rem;
+    }
   }
 }
 // full-width sections
@@ -29,15 +36,15 @@
 .fw-alt,
 .fw-highlight {
   h2 {
-    font-size: 20px;
-    font-weight: 700;
+    //font-size: 20px;
+    //font-weight: 700;
   }
   p {
-    font-size: 16px;
+    //font-size: 16px;
   }
 }
 .fw-highlight {
   h2 {
-    font-weight: 500;
+    //font-weight: 500;
   }
 }
