@@ -1,5 +1,5 @@
 // home page styles
-.home .hero {
+.hero--home {
   @include hero-bg-img('../images/hero.jpg');
   h1 {
     text-transform: uppercase;
@@ -19,7 +19,7 @@
 }
 // mobile
 @media screen and (max-width: 500px) {
-  .home .hero {
+  .hero--home {
     padding-top: 3.5em;
     padding-bottom: 6em;
     h1 {
