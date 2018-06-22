@@ -1,0 +1,11 @@
+// demo column styles
+.demo .col {
+  background-color: $extra-light-gray;
+  border: .1rem solid $light-medium-gray;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .demo .col {
+    margin-bottom: $column-bottom-margin-mobile;
+  }
+}

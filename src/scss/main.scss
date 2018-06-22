@@ -27,10 +27,11 @@
 @import "components/skiplink";
 @import "components/hero";
 @import "components/full-width";
-//@import 'components/grid'; -- Bootstrap
+@import "components/grid-float";
 
 //@import "...utility/other classes...";
 //@import "...theme styles...";
 
 // further customizations/page styles
 @import "site/home";
+@import "site/demo";

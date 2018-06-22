@@ -23,21 +23,28 @@ $accent: $lime-green;
 $link-color: $medium-blue;
 $link-hover: lighten($link-color, 15%);
 $skiplink-bg: #fff;
+
 $copy-color: $dark-gray;
 $heading-color: $dark-gray;
 $page-bg-color: $extra-light-gray;
 $header-bg-color: #fff;
 $footer-bg-color: #fff;
 $footer-txt-color: $copy-color;
+
 $main-nav-color: $dark-gray;
 $main-nav-hover: $accent;//lighten($main-nav-color, 10%);
+
 $btn-txt-color: #fff;
 $btn-bg-color: $dark-gray;
 $btn-inverse-txt-color: $dark-gray;
 $btn-inverse-border-color: $dark-gray;
+
 $fw-primary-bg: #fff;
 $fw-alt-bg: $light-gray;
 $fw-highlight-bg: $accent;
+
+$column-padding: 1rem;
+$column-bottom-margin-mobile: 1.6rem;
 
 // font import
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
