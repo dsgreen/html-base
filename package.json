@@ -26,6 +26,7 @@
     "popper.js": "^1.14.3"
   },
   "dependencies": {
-    "grunt-browser-sync": "^2.2.0"
+    "grunt-browser-sync": "^2.2.0",
+    "normalize.css": "^8.0.0"
   }
 }
