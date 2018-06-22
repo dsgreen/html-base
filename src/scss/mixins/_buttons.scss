@@ -1,4 +1,4 @@
-@mixin cta-color-override($txt-color, $bg-color) {
+@mixin btn-color-override($txt-color, $bg-color) {
   color: $txt-color;
   background-color: $bg-color;
   border-color: $bg-color;
@@ -15,7 +15,7 @@
     }
   }
 }
-@mixin cta-inv-color-override($txt-color, $bdr-color) {
+@mixin btn-inv-color-override($txt-color, $bdr-color) {
   color: $txt-color;
   border-color: $bdr-color;
   .fa {

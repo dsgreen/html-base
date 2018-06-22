@@ -1,54 +1,86 @@
-// buttons
-// if you want to bypass Bootstrap .btn and make your own
-.cta,
-.cta-inverse {
+
+.main-nav-btn a {
+  color: $main-nav-color;
+  border: .2rem solid $main-nav-color;
+  border-radius: .3em;
+  &:focus,
+  &:hover {
+    color: #fff;
+    background-color: $main-nav-color;
+  }
+  li {
+    padding-top: 2.25em;
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: .03em;
+    &.active a {
+      color: $main-nav-hover;
+    }
+  }
+  a {
+    padding: .7em 1em;
+    color: $main-nav-color;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $main-nav-hover;
+    }
+  }
+}
+
+.btn,
+.btn-inverse {
   display: inline-block;
-  padding: .7em 1em;
-  font-weight: 600;
+  padding: .6em .9em;
+  font-size: 1.4rem;
+  font-weight: 400;
   text-transform: uppercase;
-  border-radius: .4em;
+  text-decoration: none;
+  letter-spacing: .03em;
+  border-radius: .3em;
   &:hover,
   &:focus {
     text-decoration: none;
   }
 }
-.cta,
-a.cta {
-  color: $cta-txt-color;
-  background-color: $cta-bg-color;
-  border: solid .2em $cta-bg-color;
+.btn,
+a.btn {
+  color: $btn-txt-color;
+  background-color: $btn-bg-color;
+  border: solid .2rem $btn-bg-color;
   .fa {
-    color: rgba($cta-txt-color,.6);
+    color: rgba($btn-txt-color,.6);
   }
   &:hover,
   &:focus {
-    background-color: lighten($cta-bg-color, 5%);
-    border-color: lighten($cta-bg-color, 5%);
+    background-color: lighten($btn-bg-color, 5%);
+    border-color: lighten($btn-bg-color, 5%);
     .fa {
-      color: rgba($cta-txt-color,.7);
+      color: rgba($btn-txt-color,.7);
     }
   }
 }
-.cta-inverse,
-a.cta-inverse {
-  color: $cta-inverse-txt-color;
-  border: solid .2em $cta-inverse-border-color;
+.btn-inverse,
+a.btn-inverse {
+  color: $btn-inverse-txt-color;
+  border: solid .2rem $btn-inverse-border-color;
   .fa {
-    color: rgba($cta-inverse-txt-color,.6);
+    color: rgba($btn-inverse-txt-color,.6);
   }
   &:hover,
   &:focus {
-    color: lighten($cta-inverse-txt-color, 5%);
-    border-color: lighten($cta-inverse-border-color, 5%);
+    color: lighten($btn-inverse-txt-color, 5%);
+    border-color: lighten($btn-inverse-border-color, 5%);
     .fa {
-      color: rgba($cta-inverse-txt-color,.7);
+      color: rgba($btn-inverse-txt-color,.7);
     }
   }
 }
-a.cta.alt {
-  @include cta-color-override($cta-txt-color, $accent);
+a.btn.alt {
+  @include btn-color-override($btn-txt-color, $accent);
 }
-.cta.wide {
+.btn.wide {
   padding-left: 2em;
   padding-right: 2em;
 }
