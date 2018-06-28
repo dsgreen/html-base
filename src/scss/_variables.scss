@@ -26,10 +26,11 @@ $skiplink-bg: #fff;
 
 $copy-color: $dark-gray;
 $heading-color: $dark-gray;
+$footer-txt-color: $copy-color;
+
 $page-bg-color: $extra-light-gray;
 $header-bg-color: #fff;
 $footer-bg-color: #fff;
-$footer-txt-color: $copy-color;
 
 $main-nav-color: $dark-gray;
 $main-nav-hover: $accent;//lighten($main-nav-color, 10%);
@@ -39,12 +40,14 @@ $btn-bg-color: $dark-gray;
 $btn-inverse-txt-color: $dark-gray;
 $btn-inverse-border-color: $dark-gray;
 
-$fw-primary-bg: #fff;
-$fw-alt-bg: $light-gray;
-$fw-highlight-bg: $accent;
+$bg-primary: #fff;
+$bg-alt: $light-gray;
+$bg-highlight: $accent;
 
 $column-padding: 1rem;
 $column-bottom-margin-mobile: 1.6rem;
+
+$max-container-width: 1200px;
 
 // font import
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
@@ -64,8 +67,6 @@ $sans-custom: "Open Sans";
 
 $sans: $sans-custom, $sans-default;
 //$serif: $serif-custom, $serif-default;
-
-$max-container-width: 1200px;
 
 // old font stacks
 // "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
