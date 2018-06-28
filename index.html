@@ -67,7 +67,39 @@
   </main>
 </section>
 
-<section class="full-width fw-primary text-center">
+<section class="container-full-width bg-highlight">
+  <div class="row">
+    <div class="col-4 col">
+      <h3>Example Heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </div>
+    <div class="col-4 col">
+      <h3>Example Heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </div>
+    <div class="col-4 col">
+      <h3>Example Heading</h3>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+    </div>
+  </div>
+</section>
+
+<div class="row row--no-col-padding">
+  <div class="col-4 col bg-primary">
+    <h3>Example Heading</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+  <div class="col-4 col bg-alt">
+    <h3>Example Heading</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+  <div class="col-4 col bg-highlight">
+    <h3>Example Heading</h3>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+  </div>
+</div>
+
+<section class="marketing-panel bg-primary text-center">
   <div class="container">
     <div class="wrap-inner">
       <h2>Important marketing message.</h2>
@@ -78,7 +110,7 @@
   </div>
 </section>
 
-<section class="full-width fw-alt text-center">
+<section class="marketing-panel bg-alt text-center">
   <div class="container">
     <div class="wrap-inner">
       <h2>Important marketing message.</h2>
@@ -89,9 +121,26 @@
   </div>
 </section>
 
-<section class="full-width fw-highlight text-center">
-  <div class="container">
-    <div class="wrap-inner">
+<section class="bg-primary marketing-panel-alt">
+  <div class="row row--no-margin">
+    <div class="third col bg-highlight">
+      <h2>Important marketing message.</h2>
+      <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec,
+        auctor quis, purus.</p>
+      <a href="#" class="btn-inverse">Some btn <i class="fa fa-chevron-right"></i></a>
+    </div>
+    <div class="two-thirds col bg-primary">
+      <p>Other content here.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-primary marketing-panel-alt">
+  <div class="row row--no-margin">
+    <div class="two-thirds col bg-primary">
+      <p>Other content here.</p>
+    </div>
+    <div class="third col bg-alt">
       <h2>Important marketing message.</h2>
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec,
         auctor quis, purus.</p>
@@ -100,24 +149,32 @@
   </div>
 </section>
 
+
 <section class="container">
   <div class="row">
-    <div class="col-md-9">
+    <div class="col-9 col">
       <h4>Examples</h4>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="example.html">Basic markup</a></li>
         <li><a href="grid.html">Grid markup</a></li>
+        <li><a href="sub-page.html">Sub page</a></li>
       </ul>
     </div>
-    <aside class="col-md-3" role="complementary"></aside>
+    <aside class="col-3 col" role="complementary"></aside>
   </div>
 </section>
 
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-    <p class="small float-left">&copy; Copyright 2015 <i>Company Name</i></p>
-    <p class="small float-right"><a href="#top">back to top</a></p>
+    <div class="row">
+      <div class="half col">
+        <p class="">&copy; Copyright 2015 <i>Company Name</i></p>
+      </div>
+      <div class="half col">
+        <p class="text-right"><a href="#top">back to top</a></p>
+      </div>
+    </div>
   </div>
 </footer>
 
