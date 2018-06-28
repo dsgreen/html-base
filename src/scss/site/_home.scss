@@ -31,20 +31,14 @@
     }
   }
 }
-// full-width sections
-.fw-primary,
-.fw-alt,
-.fw-highlight {
-  h2 {
-    //font-size: 20px;
-    //font-weight: 700;
-  }
-  p {
-    //font-size: 16px;
-  }
+// marketing message sections
+.marketing-panel {
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
-.fw-highlight {
-  h2 {
-    //font-weight: 500;
-  }
+.marketing-panel-alt .col {
+  padding: 2em;
 }
+//.panel-img-bg {
+//  @include hero-bg-img('../images/hero.jpg');
+//}
