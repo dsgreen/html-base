@@ -26,12 +26,15 @@
 @import "components/buttons";
 @import "components/skiplink";
 @import "components/hero";
-@import "components/full-width";
 @import "components/grid-float";
+
+@import "classes/presentational";
+@import "classes/alignment";
 
 //@import "...utility/other classes...";
 //@import "...theme styles...";
 
 // further customizations/page styles
 @import "site/home";
+@import "site/sub-page";
 @import "site/demo";
