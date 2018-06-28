@@ -1,8 +1,13 @@
-.container {
+.container,
+.container-full-width {
   max-width: $max-container-width;
   margin-left: auto;
   margin-right: auto;
   padding: 0 2rem;
+}
+.container-full-width {
+  width: 100%;
+  max-width: none;
 }
 // use to manage the width inside a container
 .wrap-inner {
