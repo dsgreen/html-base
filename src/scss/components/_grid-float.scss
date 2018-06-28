@@ -15,14 +15,27 @@
 }
 
 @media only screen and (min-width: 768px) {
+  // negative margins cancel out outer column padding so column content
+  // lines up with other content on the page.
   .row {
     margin-right: -$column-padding;
     margin-left: -$column-padding;
+  }
+  // use if you want an edge to edge background color within a column, use .row--no-margin and don't wrap row with container.
+  // use .row--no-col-padding to remove column padding (or grid gutters).
+  .row.row--no-margin,
+  .row.row--no-col-padding {
+    margin-right: 0;
+    margin-left: 0;
   }
   .col {
     float: left;
     margin-bottom: 0;
     padding: 0 $column-padding;
+  }
+  // cancels out column padding
+  .row.row--no-col-padding .col {
+    padding: 0;
   }
   // nested cols
   .col .col:first-of-type {
