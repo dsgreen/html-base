@@ -17,6 +17,7 @@
   max-width: 100%;
   height: auto;
 }
+.img-fluid,
 .img-responsive {
   @include img-responsive;
 }
