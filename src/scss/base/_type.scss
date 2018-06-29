@@ -105,17 +105,22 @@ ul li {
 //tables
 table {
   width: 100%;
+  border-spacing: 0;
 }
 th {
-  background-color: #eaeaea;
+  background-color: $table-head-bg-color;
 }
 th,
 td {
-  padding: 0.2em;
+  padding: .4em;
 }
 td {
   text-align: center;
-  border-bottom: 0.1em solid #eaeaea;
+  border-bottom: .1rem solid $table-border-color;
+}
+caption {
+  padding: .6em;
+  font-size: 1.6rem;
 }
 
 // other
