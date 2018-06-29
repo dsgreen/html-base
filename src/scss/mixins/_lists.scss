@@ -5,6 +5,9 @@
     list-style-type: none;
   }
 }
+.list-unstyled {
+  @include list-nostyle;
+}
 @mixin list-inline {
   padding-left: 0;
   margin-left: -5px;
@@ -14,4 +17,7 @@
     padding-right: 5px;
     padding-left: 5px;
   }
+}
+.list-inline {
+  @include list-inline;
 }
