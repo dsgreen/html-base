@@ -120,15 +120,12 @@ td {
 
 // other
 blockquote {
-  span.author {
-    padding-right: 1.4em;
-    display: block;
-    text-align: right;
-  }
+  .author {}
 }
-abbr[title] {
-  border-bottom: 0.1em dotted #888;
-}
+//abbr[title] {
+//  text-decoration: none;
+//  border-bottom: .1em dotted $medium-gray;
+//}
 abbr[title]:hover {
   cursor: help;
 }
