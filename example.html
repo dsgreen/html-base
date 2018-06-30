@@ -41,7 +41,7 @@
 
 <section class="container" id="content">
   <div class="row">
-    <main class="col-md-9" id="main" role="main">
+    <main class="col col-9" id="main" role="main">
 
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec,
         auctor quis, purus. Vivamus ut sem. Fusce aliquam nunc vitae purus. Aenean viverra malesuada libero. Fusce ac
@@ -225,62 +225,63 @@
         <fieldset>
           <legend>Contact Us</legend>
 
-          <div class="form-group">
-            <label for="full_name">Your Name</label>
-            <input type="text" name="full_name" id="full_name" placeholder="name" class="form-control">
+          <label for="full_name">Your Name <span class="req" title="required">*</span></label>
+          <input type="text" name="full_name" id="full_name" placeholder="name">
+
+          <label for="email">Your Email <span class="req" title="required">*</span></label>
+          <input type="text" name="email" id="email" placeholder="email">
+
+          <div class="row row--no-margin">
+            <div class="col-6 col">
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" placeholder="city">
+            </div>
+            <div class="col-6 col">
+              <label for="state">State</label>
+              <input type="text" name="state" id="state" placeholder="state">
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="email">Your Email</label>
-            <input type="text" name="email" id="email" placeholder="email" class="form-control">
+          <label for="routing">Concerning</label>
+          <select name="routing" id="routing">
+            <option value="" selected>select an option</option>
+            <option value="Lizards">Lizards</option>
+            <option value="Monkeys">Monkeys</option>
+            <option value="Cats">Cats</option>
+          </select>
+
+          <label for="message">Your Message <span class="req" title="required">*</span></label>
+          <textarea name="message" id="message" cols="5" rows="8">enter a message</textarea>
+
+          <div class="radio">
+            <p>Receive our newsletter?</p>
+            <div class="row row--no-margin">
+              <div class="col col-3">
+                <input type="radio" name="newsletter" value="yes" id="yes">
+                <label for="yes">Sign me up!</label>
+              </div>
+            </div>
+            <div class="row row--no-margin">
+              <div class="col col-3">
+                <input type="radio" name="newsletter" value="no" id="no">
+                <label for="no">No thanks</label>
+              </div>
+            </div>
           </div>
 
-          <div class="form-group">
-            <label for="routing">Concerning</label>
-            <select name="routing" id="routing" class="form-control">
-              <option value="" selected>select an option</option>
-              <option value="Lizards">Lizards</option>
-              <option value="Monkeys">Monkeys</option>
-              <option value="Cats">Cats</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea name="message" id="message" cols="5" rows="8" class="form-control">enter a message</textarea>
-          </div>
-
-          <p><b>Receive our newsletter?</b></p>
-          <div class="form-check">
-            <input type="radio" name="newsletter" value="yes" id="yes" class="form-check-input">
-            <label class="form-check-label" for="yes">
-              Sign me up!
-            </label>
-          </div>
-          <div class="form-check">
-            <input type="radio" name="newsletter" value="no" id="no" class="form-check-input">
-            <label class="form-check-label" for="no">
-              No thanks
-            </label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" name="terms" id="terms" value="agree" class="form-check-input">
-            <label class="form-check-label" for="terms">
-              I agree to the <a href="#">terms and conditions</a>
-            </label>
+          <div class="checkbox">
+            <input type="checkbox" name="terms" id="terms" value="agree">
+            <label for="terms">I agree to the <a href="#">terms and conditions</a></label>
           </div>
 
         </fieldset>
-        <button type="submit" name="send" id="send" class="btn btn-primary mt-2 mb-2">Send</button>
+        <button type="submit" name="send" id="send" class="btn wide">Send</button>
       </form>
 
       <h2>Responsive image</h2>
-      <img src="https://placehold.it/800x400" class="img-fluid mb-2" alt="some image">
+      <img src="https://placehold.it/800x400" class="img-fluid" alt="some image">
 
       <h2>Buttons</h2>
-      <p>Using class <code>.btn</code> (<em>call to action</em>) to avoid styling conflicts with Bootstrap
-        <code>.btn</code> class.</p>
       <a href="#" class="btn">Some btn <i class="fa fa-caret-right"></i></a>
       <a href="#" class="btn-inverse">Inverse btn <i class="fa fa-caret-right"></i></a>
       <a href="#" class="btn alt">Alt btn <i class="fa fa-caret-right"></i></a>
@@ -289,14 +290,14 @@
 
     </main>
 
-    <aside class="col-md-3" role="complementary">
+    <aside class="col col-3" role="complementary">
       <h4>Examples</h4>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="example.html">Basic markup</a></li>
-          <li><a href="bootstrap-navbar.html">Bootstrap navbar markup</a></li>
-          <li><a href="http://getbootstrap.com/">Bootstrap documentation</a></li>
+          <li><a href="grid.html">Grid markup</a></li>
+          <li><a href="sub-page.html">Sub page</a></li>
         </ul>
       </nav>
     </aside>
@@ -306,8 +307,14 @@
 
 <footer class="site-footer" role="contentinfo">
   <div class="container">
-    <p class="small float-left">&copy; Copyright 2015 <i>Company Name</i></p>
-    <p class="small float-right"><a href="#top">back to top</a></p>
+    <div class="row">
+      <div class="half col">
+        <p class="">&copy; Copyright 2015 <i>Company Name</i></p>
+      </div>
+      <div class="half col">
+        <p class="text-right"><a href="#top">back to top</a></p>
+      </div>
+    </div>
   </div>
 </footer>
 
