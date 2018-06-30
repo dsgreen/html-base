@@ -15,10 +15,9 @@
 
 @import "base/defaults";
 @import "base/type";
-//@import "base/forms"; -- Bootstrap
+@import "base/forms";
 
 @import "components/containers";
-//@import "components/skiplink"; -- Bootstrap
 @import "components/header";
 @import "components/header-fixed";
 @import "components/footer";
