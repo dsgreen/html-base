@@ -21,11 +21,3 @@
 .img-responsive {
   @include img-responsive;
 }
-
-// presentational
-@mixin margin-none {
-  margin: 0;
-}
-.margin-none {
-  @include margin-none;
-}

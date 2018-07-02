@@ -9,7 +9,7 @@
 .main-navigation {
   ul {
     @include list-nostyle;
-    @include margin-none;
+    margin: 0;
     text-align: center;
   }
   li {
