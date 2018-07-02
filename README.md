@@ -1,2 +1,2 @@
-# project-boilerplate
-A basic Bootstrap boilerplate with Sass.
+# html-base
+A basic boilerplate with Sass.
