@@ -11,7 +11,7 @@
     font-weight: 400;
     letter-spacing: .05em;
     text-transform: uppercase;
-    @include link-color($dark-gray, $accent);
+    @include link-color($dark-gray-01, $accent);
   }
   .logo {
     width: 220px;

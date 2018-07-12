@@ -45,7 +45,7 @@ a,
  * Customize the background color to match your design.
  */
 ::selection {
-  background: $extra-light-gray;
+  background: $light-gray-01;
   text-shadow: none;
 }
 
@@ -56,7 +56,7 @@ hr {
   display: block;
   height: .1rem;
   border: 0;
-  border-top: .1rem solid $light-medium-gray;
+  border-top: .1rem solid $light-gray-03;
   margin: 1em 0;
   padding: 0;
 }
