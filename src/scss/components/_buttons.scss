@@ -1,34 +1,4 @@
 
-.main-nav-btn a {
-  color: $main-nav-color;
-  border: .2rem solid $main-nav-color;
-  border-radius: .3em;
-  &:focus,
-  &:hover {
-    color: #fff;
-    background-color: $main-nav-color;
-  }
-  li {
-    padding-top: 2.25em;
-    font-size: 1.3rem;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: .03em;
-    &.active a {
-      color: $main-nav-hover;
-    }
-  }
-  a {
-    padding: .7em 1em;
-    color: $main-nav-color;
-    text-decoration: none;
-    &:hover,
-    &:focus {
-      color: $main-nav-hover;
-    }
-  }
-}
-
 .btn,
 .btn-inverse {
   display: inline-block;

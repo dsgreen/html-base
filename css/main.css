@@ -945,39 +945,6 @@ body {
   }
 }
 
-.main-nav-btn a {
-  color: #2e2e2e;
-  border: 0.2rem solid #2e2e2e;
-  border-radius: .3em;
-}
-
-.main-nav-btn a:focus, .main-nav-btn a:hover {
-  color: #fff;
-  background-color: #2e2e2e;
-}
-
-.main-nav-btn a li {
-  padding-top: 2.25em;
-  font-size: 1.3rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: .03em;
-}
-
-.main-nav-btn a li.active a {
-  color: #32cd32;
-}
-
-.main-nav-btn a a {
-  padding: .7em 1em;
-  color: #2e2e2e;
-  text-decoration: none;
-}
-
-.main-nav-btn a a:hover, .main-nav-btn a a:focus {
-  color: #32cd32;
-}
-
 .btn,
 .btn-inverse {
   display: inline-block;
