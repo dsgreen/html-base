@@ -434,7 +434,6 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #2e2e2e;
   background-color: #eaeaea;
 }
@@ -515,6 +514,19 @@ textarea {
   resize: vertical;
 }
 
+abbr[title] {
+  text-decoration: none;
+  border-bottom: 0.1rem dotted #999999;
+}
+
+abbr[title]:hover {
+  cursor: help;
+}
+
+body {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -526,17 +538,17 @@ body {
 
 h1 {
   font-size: 3.6rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 h2 {
   font-size: 3rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 h3 {
   font-size: 2.4rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 h4,
@@ -546,7 +558,7 @@ dt,
 legend,
 caption {
   font-size: 1.8rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 
 p,
@@ -582,6 +594,10 @@ strong {
   font-weight: bold;
 }
 
+b {
+  font-weight: bold;
+}
+
 em {
   font-style: italic;
 }
@@ -596,7 +612,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: .25em;
+  margin-bottom: .5em;
 }
 
 h6 {
@@ -653,10 +669,6 @@ caption {
   font-size: 1.6rem;
 }
 
-abbr[title]:hover {
-  cursor: help;
-}
-
 label {
   display: block;
 }
@@ -697,14 +709,29 @@ input[type="checkbox"] {
 input.btn,
 input.button,
 input[type="submit"] {
-  margin: 1em 0;
-  padding: .4em;
-  font-weight: bold;
-  text-transform: uppercase;
+  display: inline-block;
   clear: both;
-  background-color: #eaeaea;
+  width: auto;
+  margin: 1em 0;
+  padding: .6em 1.5em;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .03em;
+  color: #fff;
+  background-color: #2e2e2e;
+  border: solid 0.2rem #2e2e2e;
   transition: all 0.1s ease;
-  width: 15em;
+}
+
+input.btn:hover, input.btn:focus,
+input.button:hover,
+input.button:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+  background-color: #3b3b3b;
+  border-color: #3b3b3b;
 }
 
 label.hidden {
@@ -716,7 +743,7 @@ label.hidden {
 input,
 select,
 textarea {
-  border: 0.1em solid #dadada;
+  border: 0.1rem solid #cccccc;
 }
 
 input:hover,
@@ -728,18 +755,7 @@ textarea:active,
 select:hover,
 select:focus,
 select:active {
-  border-color: #999;
-}
-
-input.btn:hover,
-input.btn:focus,
-input.button:hover,
-input.button:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-  background-color: #333;
-  border-color: #333;
-  color: #fff;
+  border-color: #999999;
 }
 
 .req,
@@ -794,6 +810,10 @@ input[type="submit"]:focus {
 .site-header .logo {
   width: 220px;
   height: auto;
+}
+
+.site-header .container {
+  max-width: none;
 }
 
 body {
@@ -860,9 +880,10 @@ body {
 }
 
 .main-nav-btn a {
-  color: #2e2e2e;
+  padding-right: 1.4em;
+  padding-left: 1.4em;
   border: 0.2rem solid #2e2e2e;
-  border-radius: .3em;
+  border-radius: 0;
 }
 
 .main-nav-btn a:focus, .main-nav-btn a:hover {
@@ -954,7 +975,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: .03em;
-  border-radius: .3em;
+  border-radius: 0;
 }
 
 .btn:hover, .btn:focus,
@@ -1033,8 +1054,8 @@ a.btn.alt:hover .fa, a.btn.alt:focus .fa {
 }
 
 .btn.wide {
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
 }
 
 .skiplink {

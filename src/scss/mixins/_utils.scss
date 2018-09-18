@@ -21,3 +21,8 @@
 .img-responsive {
   @include img-responsive;
 }
+
+@mixin font-smoothing {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}

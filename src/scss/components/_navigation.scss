@@ -34,12 +34,14 @@
 }
 // navigation item with button styling
 .main-nav-btn a {
-  color: $main-nav-color;
-  border: .2rem solid $main-nav-color;
-  border-radius: .3em;
+  padding-right: 1.4em;
+  padding-left: 1.4em;
+  //color: $main-nav-color;
+  border: $btn-border-width solid $main-nav-color;
+  border-radius: $btn-border-radius;
   &:focus,
   &:hover {
-    color: #fff;
+    color: $main-nav-color--transparent-header;
     background-color: $main-nav-color;
   }
 }

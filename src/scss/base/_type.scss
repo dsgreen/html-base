@@ -1,3 +1,8 @@
+// font family
+body {
+  font-family: $sans;
+}
+
 // font size & line height
 html {
   font-size: 62.5%;
@@ -8,15 +13,15 @@ body {
 }
 h1 {
   font-size: 3.6rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 h2 {
   font-size: 3rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 h3 {
   font-size: 2.4rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 h4,
 h5,
@@ -25,7 +30,7 @@ dt,
 legend,
 caption {
   font-size: 1.8rem;
-  line-height: 1;
+  line-height: 1.4;
 }
 p,
 li,
@@ -59,6 +64,9 @@ th {
 strong {
   font-weight: bold;
 }
+b {
+  font-weight: bold;
+}
 em {
   font-style: italic;
 }
@@ -73,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin-bottom: .25em;
+  margin-bottom: .5em;
 }
 h6 {
   margin-top: .5em;
@@ -126,11 +134,4 @@ caption {
 // other
 blockquote {
   .author {}
-}
-//abbr[title] {
-//  text-decoration: none;
-//  border-bottom: .1em dotted $medium-gray-01;
-//}
-abbr[title]:hover {
-  cursor: help;
 }

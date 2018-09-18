@@ -47,12 +47,16 @@ $table-head-bg-color: #fff;
 $table-border-color: $light-gray-04;
 
 $main-nav-color: $dark-gray-01;
+$main-nav-color--transparent-header: #fff;
 $main-nav-hover: $accent;//lighten($main-nav-color, 10%);
 
 $btn-txt-color: #fff;
 $btn-bg-color: $dark-gray-01;
 $btn-inverse-txt-color: $dark-gray-01;
 $btn-inverse-border-color: $dark-gray-01;
+
+$form-input-outline-color: $gray-20;
+$form-input-outline-hover: darken($form-input-outline-color,20%);
 
 $bg-primary: #fff;
 $bg-alt: $light-gray-02;
@@ -61,7 +65,12 @@ $bg-highlight: $accent;
 $column-padding: 1rem;
 $column-bottom-margin-mobile: 1.6rem;
 
+$btn-border-width: .2rem;
+$btn-border-radius: 0;
+
 $max-container-width: 1200px;
+
+// mq breakpoints
 
 // font import
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
@@ -81,6 +90,10 @@ $sans-custom: "Open Sans";
 
 $sans: $sans-custom, $sans-default;
 //$serif: $serif-custom, $serif-default;
+
+// Note: Typekit includes a sans-serif fallback, no need to specify fallback here, example --
+// $futura: "futura-pt";
+// may need to increase font size with Typekit fonts
 
 // old font stacks
 // "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;

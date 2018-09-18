@@ -15,10 +15,12 @@ jQuery(document).ready(function($) {
   // toggle button
   $('.nav-toggle').click(function(){
     $('.main-navigation').slideToggle('fast');
+    $('.site-header').toggleClass('toggled');
   });
 
   // browser resize, collapse mobile menu
   $(window).resize(function() {
+    $('.site-header').removeClass('toggled');
     if (window.innerWidth > 767) {
       $('.main-navigation').show();
     }

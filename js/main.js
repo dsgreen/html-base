@@ -5,8 +5,10 @@ jQuery(document).ready(function($) {
     }
     $(".nav-toggle").click(function() {
         $(".main-navigation").slideToggle("fast");
+        $(".site-header").toggleClass("toggled");
     });
     $(window).resize(function() {
+        $(".site-header").removeClass("toggled");
         if (window.innerWidth > 767) {
             $(".main-navigation").show();
         } else if (window.innerWidth < 768) {

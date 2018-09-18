@@ -17,7 +17,8 @@
     width: 220px;
     height: auto;
   }
-  //.container {
-  //  padding: 0 2rem;
-  //}
+  // make header span full browser width
+  .container {
+    max-width: none;
+  }
 }

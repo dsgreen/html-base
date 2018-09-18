@@ -32,14 +32,25 @@ input[type="checkbox"] {
 input.btn,
 input.button,
 input[type="submit"] {
-  margin: 1em 0;
-  padding: .4em;
-  font-weight: bold;
-  text-transform: uppercase;
+  display: inline-block;
   clear: both;
-  background-color: #eaeaea;
+  width: auto;
+  margin: 1em 0;
+  padding: .6em 1.5em;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .03em;
+  color: $btn-txt-color;
+  background-color: $btn-bg-color;
+  border: solid .2rem $btn-bg-color;
   transition: all 0.1s ease;
-  width: 15em;
+  &:hover,
+  &:focus {
+    background-color: lighten($btn-bg-color, 5%);
+    border-color: lighten($btn-bg-color, 5%);
+  }
 }
 label.hidden {
   margin-left: -10000em;
@@ -51,7 +62,7 @@ label.hidden {
 input,
 select,
 textarea {
-  border: 0.1em solid #dadada;
+  border: .1rem solid $form-input-outline-color;
 }
 
 input:hover,
@@ -63,18 +74,7 @@ textarea:active,
 select:hover,
 select:focus,
 select:active {
-  border-color: #999;
-}
-
-input.btn:hover,
-input.btn:focus,
-input.button:hover,
-input.button:focus,
-input[type="submit"]:hover,
-input[type="submit"]:focus {
-  background-color: #333;
-  border-color: #333;
-  color: #fff;
+  border-color: $form-input-outline-hover;
 }
 
 .req,
