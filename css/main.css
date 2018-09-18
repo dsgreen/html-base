@@ -816,8 +816,35 @@ select:active {
   max-width: none;
 }
 
+.body--transparent-header .site-header {
+  background-color: transparent;
+  transition: background-color .2s ease;
+}
+
+.body--transparent-header .site-header .brand {
+  color: #fff;
+  text-decoration: none;
+}
+
+.body--transparent-header .site-header .brand:link, .body--transparent-header .site-header .brand:active, .body--transparent-header .site-header .brand:visited {
+  color: #fff;
+}
+
+.body--transparent-header .site-header .brand:hover, .body--transparent-header .site-header .brand:focus {
+  color: #32cd32;
+  text-decoration: none;
+}
+
+.body--transparent-header .site-header.toggled {
+  background-color: rgba(0, 0, 0, 0.92);
+}
+
 body {
   padding-top: 6.9rem;
+}
+
+body.body--transparent-header {
+  padding-top: 0;
 }
 
 .site-header {
@@ -825,6 +852,11 @@ body {
   z-index: 999;
   top: 0;
   width: 100%;
+}
+
+body.body--transparent-header .site-header {
+  position: absolute;
+  box-shadow: none;
 }
 
 .site-footer {
@@ -879,6 +911,14 @@ body {
   color: #32cd32;
 }
 
+.body--transparent-header .main-navigation a {
+  color: #fff;
+}
+
+.body--transparent-header .main-navigation a:hover, .body--transparent-header .main-navigation a:focus {
+  color: #32cd32;
+}
+
 .main-nav-btn a {
   padding-right: 1.4em;
   padding-left: 1.4em;
@@ -889,6 +929,17 @@ body {
 .main-nav-btn a:focus, .main-nav-btn a:hover {
   color: #fff;
   background-color: #2e2e2e;
+}
+
+.body--transparent-header .main-nav-btn a {
+  color: #fff;
+  border: 0.2rem solid #fff;
+  border-radius: 0;
+}
+
+.body--transparent-header .main-nav-btn a:focus, .body--transparent-header .main-nav-btn a:hover {
+  color: #2e2e2e;
+  background-color: #fff;
 }
 
 @media (max-width: 767px) {
@@ -934,6 +985,9 @@ body {
   .nav-toggle:hover .bar,
   .nav-toggle:focus .bar {
     background-color: #32cd32;
+  }
+  .body--transparent-header .nav-toggle .bar {
+    background-color: #fff;
   }
   .main-navigation ul {
     margin-bottom: 1em;
