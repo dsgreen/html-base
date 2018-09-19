@@ -28,8 +28,19 @@
   .brand {
     @include link-color($main-nav-color--transparent-header, $accent);
   }
+
+  // mobile menu is open
   &.toggled {
     background-color: rgba(0,0,0,.92);
   }
+
+  // page has been scrolled
+  &.scrolled {
+    background-color: $header-bg-color;
+    .brand {
+      @include link-color($dark-gray-01, $accent);
+    }
+  }
+
   transition: background-color .2s ease;
 }

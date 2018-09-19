@@ -15,4 +15,7 @@ body.body--transparent-header {
 body.body--transparent-header .site-header {
   position: absolute;
   box-shadow: none;
+  &.scrolled {
+    position: fixed;
+  }
 }

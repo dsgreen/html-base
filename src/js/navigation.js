@@ -29,4 +29,14 @@ jQuery(document).ready(function($) {
     }
   });
 
+  // add class when scrolling, for pages with transparent header
+  $(window).scroll(function() {
+    if ($(document).scrollTop() > 75) {
+      $('.site-header').addClass('scrolled');
+    }
+    else {
+      $('.site-header').removeClass('scrolled');
+    }
+  });
+
 });

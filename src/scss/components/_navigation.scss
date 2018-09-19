@@ -41,12 +41,21 @@
     }
   }
 }
+.site-header.scrolled .main-navigation {
+  a {
+    color: $main-nav-color;
+    &:hover,
+    &:focus {
+      color: $main-nav-hover;
+    }
+  }
+}
 
 // navigation item with button styling
-.main-nav-btn a {
+.main-nav-btn a,
+.site-header.scrolled .main-nav-btn a {
   padding-right: 1.4em;
   padding-left: 1.4em;
-  //color: $main-nav-color;
   border: $btn-border-width solid $main-nav-color;
   border-radius: $btn-border-radius;
   &:focus,
@@ -58,7 +67,6 @@
 .body--transparent-header  .main-nav-btn a {
   color: $main-nav-color--transparent-header;
   border: $btn-border-width solid $main-nav-color--transparent-header;
-  border-radius: $btn-border-radius;
   &:focus,
   &:hover {
     color: $copy-color;
@@ -113,6 +121,11 @@
   .body--transparent-header {
     .nav-toggle .bar {
       background-color: $main-nav-color--transparent-header;
+    }
+  }
+  .site-header.scrolled {
+    .nav-toggle .bar {
+      background-color: $main-nav-color;
     }
   }
 

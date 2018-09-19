@@ -15,6 +15,13 @@ jQuery(document).ready(function($) {
             $(".main-navigation").hide();
         }
     });
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 75) {
+            $(".site-header").addClass("scrolled");
+        } else {
+            $(".site-header").removeClass("scrolled");
+        }
+    });
 });
 
 jQuery(document).ready(function($) {
