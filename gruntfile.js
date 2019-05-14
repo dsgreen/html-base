@@ -1,3 +1,5 @@
+const sass = require('node-sass');
+
 module.exports = function(grunt) {
 
   // configure tasks
@@ -22,6 +24,7 @@ module.exports = function(grunt) {
     sass: {
       dev: {
         options: {
+          implementation: sass,
           outputStyle: 'expanded',
           sourceMap: true
         },
@@ -31,6 +34,7 @@ module.exports = function(grunt) {
       },
       build: {
         options: {
+          implementation: sass,
           outputStyle: 'compressed'
         },
         files: {
