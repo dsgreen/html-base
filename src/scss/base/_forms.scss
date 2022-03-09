@@ -1,3 +1,6 @@
+legend {
+  margin-bottom: 1em;
+}
 label {
   display: block;
 }
@@ -6,8 +9,94 @@ select,
 textarea {
   margin-bottom: 1em;
   padding: .4em;
+}
+textarea {
   width: 100%;
 }
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input.btn,
+input.button {
+  display: inline-block;
+  clear: both;
+  width: auto;
+  margin: 1em 0;
+  padding: .6em 1.5em;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .03em;
+  color: $btn-txt-color;
+  background-color: $btn-bg-color;
+  border: solid .2rem $btn-bg-color;
+  transition: all 0.1s ease;
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten($btn-bg-color, 5%);
+    border-color: lighten($btn-bg-color, 5%);
+  }
+}
+label.hidden {
+  margin-left: -10000em;
+  width: 0;
+  float: none;
+}
+
+// form color
+input,
+select,
+textarea {
+  color: $form-input-color;
+  border: .1rem solid $form-input-outline-color;
+}
+
+input:hover,
+input:focus,
+input:active,
+textarea:hover,
+textarea:focus,
+textarea:active,
+select:hover,
+select:focus,
+select:active {
+  border-color: $form-input-outline-hover;
+}
+
+.req,
+.required {
+  color: $form-required-color;
+}
+
+/* wrap elements with .form-group to give them 100% width and apply other formatting */
+.form-group {
+  // default label margins throw off the search widget style
+  label {
+    margin: .25em 0 .5em 0;
+  }
+  input,
+  select {
+    width: 100%;
+  }
+}
+.form-check {
+  @include clearfix;
+  label,
+  input[type="radio"],
+  input[type="checkbox"] {
+    width: auto;
+    float: left;
+    margin: .4em;
+  }
+  label {
+    margin-top: 0;
+    margin-bottom: .5em;
+  }
+}
+
+// radio/checkbox styles
 .radio input,
 .checkbox input,
 input[type="radio"],
@@ -28,56 +117,4 @@ input[type="checkbox"] {
 .radio p,
 .checkbox p {
   margin-bottom: .5em;
-}
-input.btn,
-input.button,
-input[type="submit"] {
-  display: inline-block;
-  clear: both;
-  width: auto;
-  margin: 1em 0;
-  padding: .6em 1.5em;
-  font-size: 1.4rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: .03em;
-  color: $btn-txt-color;
-  background-color: $btn-bg-color;
-  border: solid .2rem $btn-bg-color;
-  transition: all 0.1s ease;
-  &:hover,
-  &:focus {
-    background-color: lighten($btn-bg-color, 5%);
-    border-color: lighten($btn-bg-color, 5%);
-  }
-}
-label.hidden {
-  margin-left: -10000em;
-  width: 0;
-  float: none;
-}
-
-// form color
-input,
-select,
-textarea {
-  border: .1rem solid $form-input-outline-color;
-}
-
-input:hover,
-input:focus,
-input:active,
-textarea:hover,
-textarea:focus,
-textarea:active,
-select:hover,
-select:focus,
-select:active {
-  border-color: $form-input-outline-hover;
-}
-
-.req,
-.required {
-  color: red;
 }

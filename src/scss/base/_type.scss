@@ -1,5 +1,21 @@
+// font vars
+$font__main: sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+$color__background-ins: #fff9c0;
+
 // font family
 body {
+  font-family: $sans;
+  overflow-wrap: break-word;
+}
+// edge case in WP theme unit test
+.nav-links {
+  overflow-wrap: anywhere;
+}
+h1, h2, h3, h4, h5, h6, dt, legend, caption, label, th {
   font-family: $sans;
 }
 
@@ -42,9 +58,14 @@ input,
 select,
 textarea,
 button,
+optgroup,
 address,
 blockquote {
   font-size: 1.6rem;
+  line-height: 1.625;
+}
+figcaption {
+  font-size: 1.4rem;
   line-height: 1.625;
 }
 
@@ -61,13 +82,11 @@ caption,
 th {
   font-weight: normal;
 }
-strong {
-  font-weight: bold;
-}
+strong,
 b {
   font-weight: bold;
 }
-em {
+em, i, dfn, cite {
   font-style: italic;
 }
 address {
@@ -89,7 +108,8 @@ h6 {
 p,
 dd,
 address,
-blockquote {
+blockquote,
+pre {
   margin-bottom: 1.625em;
 }
 table,
@@ -99,16 +119,26 @@ dl {
   margin-bottom: 2.4em;
 }
 
+// lists
+// define left margin on lists if needed
+ul {
+  list-style: disc;
+}
+ol {
+  list-style: decimal;
+}
+
 // nested lists
-li ul {
+// zero out left margin on nested lists if needed
+li > ul,
+li > ol {
   margin-bottom: 0;
 }
-li ul li {
-  list-style-type: circle;
-}
-ul li {
-  list-style-type: disc;
-}
+// edge case in WP theme unit test, comment this out
+// switch to circle for nested list items
+//li > ul li {
+//  list-style-type: circle;
+//}
 
 //tables
 table {
@@ -132,6 +162,27 @@ caption {
 }
 
 // other
-blockquote {
-  .author {}
+pre {
+  background: $pre-bg-color;
+  font-family: $font__pre;
+  font-size: 1.5rem;
+  line-height: 1.625;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1.6em;
 }
+code, kbd, tt, var {
+  font-family: $font__code;
+}
+mark, ins {
+  background: $color__background-ins;
+  text-decoration: none;
+}
+big {
+  font-size: 125%;
+}
+
+//blockquote {
+//  .author {}
+//}
+//figcaption {}

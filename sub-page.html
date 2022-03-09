@@ -2,33 +2,45 @@
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>HTML Base</title>
   <meta name="description" content="">
   <meta name="author" content="Douglas Green">
-  <!-- icon fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="css/bootstrap-grid.css" rel="stylesheet">
+  <link href="fontawesome/css/all.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
-  <script src="js/modernizr.custom.07230.js"></script>
-  <!-- webfonts -->
+  <script src="js/modernizr-custom.min.js"></script>
   <!-- analytics -->
 </head>
 <body class="home">
 <a class="skiplink" href="#content">Skip to main content</a>
 
-<header class="site-header" id="top" role="banner">
+<header class="site-header" id="site-header">
   <div class="container">
-    <a href="index.html" class="brand">
-      HTML Base
       <!--<img src="images/your-logo.svg" class="logo" alt="Logo">-->
-    </a>
+    <p class="site-title">
+      <a href="index.html" class="brand">HTML Base</a>
+    </p>
+    <div id="mobile-navigation-wrap">
     <button class="nav-toggle">
       <span class="nav-toggle-text">Menu</span>
       <span class="bar"></span>
       <span class="bar"></span>
       <span class="bar"></span>
     </button>
-    <nav class="main-navigation hidden" role="navigation">
+      <nav class="mobile-navigation hidden">
+        <ul>
+          <li><a href="index.html">Nav Link</a></li>
+          <li><a href="index.html">Nav Link</a></li>
+          <li><a href="index.html">Nav Link</a></li>
+          <li class="main-nav-btn"><a href="index.html">Nav Link</a></li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="main-navigation hidden">
       <ul>
         <li><a href="index.html">Nav Link</a></li>
         <li><a href="index.html">Nav Link</a></li>
@@ -47,8 +59,8 @@
   </div>
 </section>
 
-<section class="container" id="content">
-  <main class="" id="main" role="main">
+<div class="site-content container" id="content">
+  <main class="site-main" id="main">
     <h2>Heading</h2>
     <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget,
       tristique nec, auctor quis, purus. Vivamus ut sem. Fusce aliquam nunc vitae purus. Aenean viverra malesuada
@@ -70,7 +82,7 @@
       quam. Donec neque. Nunc venenatis enim nec quam. Cras faucibus, justo vel accumsan aliquam, tellus dui fringilla
       quam, in condimentum augue lorem non tellus. </p>
   </main>
-</section>
+</div>
 
 <section class="marketing-panel bg-highlight text-center">
   <div class="container">
@@ -78,27 +90,27 @@
       <h2>Important marketing message.</h2>
       <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Duis ligula lorem, consequat eget, tristique nec,
         auctor quis, purus.</p>
-      <a href="#" class="btn-inverse">Some btn <i class="fa fa-caret-right"></i></a>
+      <a href="#" class="btn-outline">Some btn <i class="fa fa-caret-right"></i></a>
     </div>
   </div>
 </section>
 
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
+<footer class="site-footer">
+  <div class="container site-info">
     <div class="row">
-      <div class="half col">
+      <div class="col col-6">
         <p class="">&copy; Copyright 2015 <i>Company Name</i></p>
       </div>
-      <div class="half col">
-        <p class="text-right"><a href="#top">back to top</a></p>
+      <div class="col col-6">
+        <p class="text-right"><a href="#top" class="back-to-top"><i class="fas fa-angle-up fa-2x" title="Back to top"></i></a></p>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/jquery.scrollTo.min.js"></script>
-<script src="js/jquery.localScroll.min.js"></script>
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/hoverintent.js"></script>
+<script src="js/superfish.min.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

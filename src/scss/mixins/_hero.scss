@@ -1,5 +1,4 @@
-@mixin hero-bg-img($img-url) {
-  background-image: url($img-url);
+@mixin hero-bg-img() {
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;

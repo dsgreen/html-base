@@ -1,12 +1,15 @@
 // if no js, menu will be hidden - need to override
-.no-js .main-navigation.hidden {
+.no-js .main-navigation.hidden,
+.no-js .mobile-navigation.hidden {
   display: block !important;
 }
 // don't need nav toggle if no js
 .no-js .nav-toggle {
   display: none;
 }
-.main-navigation {
+.main-navigation,
+.main-navigation div,
+.mobile-navigation {
   ul {
     @include list-nostyle;
     margin: 0;
@@ -21,6 +24,11 @@
     &.active a {
       color: $main-nav-hover;
     }
+    // highlight current menu item
+    &.current-menu-item > a,
+    &.current_page_item > a {
+      color: $main-nav-active;
+    }
   }
   a {
     padding: .7em 1em;
@@ -31,8 +39,32 @@
       color: $main-nav-hover;
     }
   }
+  .menu-item-has-children > a::after,
+  .page_item_has_children > a::after {
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    margin-left: .5em;
+  }
 }
-.body--transparent-header .main-navigation {
+.mobile-nav-close {
+  display: block;
+  padding: 1em;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+.mobile-nav-close::before {
+  content: "\f410";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  margin-right: .5em;
+}
+// Use alternate navigation color for page with image background
+.body--transparent-header .main-navigation,
+.body--transparent-header .mobile-navigation {
   a {
     color: $main-nav-color--transparent-header;
     &:hover,
@@ -41,13 +73,20 @@
     }
   }
 }
-.site-header.scrolled .main-navigation {
+// Navigation is sticky and reverts to normal color scheme after page is scrolled
+.body--transparent-header .site-header.scrolled .main-navigation,
+.body--transparent-header .site-header.scrolled .mobile-navigation {
   a {
     color: $main-nav-color;
-    &:hover,
-    &:focus {
-      color: $main-nav-hover;
-    }
+  }
+  // highlight current menu item
+  .current-menu-item > a,
+  .current_page_item > a {
+    color: $main-nav-active;
+  }
+  .sub-menu .current-menu-item > a,
+  .children .current_page_item > a {
+    color: $main-nav-active;
   }
 }
 
@@ -60,8 +99,9 @@
   border-radius: $btn-border-radius;
   &:focus,
   &:hover {
-    color: $main-nav-color--transparent-header;
-    background-color: $main-nav-color;
+    color: $main-nav-btn-hover;
+    background-color: $main-nav-btn-hover-bg;
+    border-color: $main-nav-btn-hover-bg;
   }
 }
 .body--transparent-header  .main-nav-btn a {
@@ -75,9 +115,22 @@
 }
 
 // nav toggle button and mobile only adjustments
-@media (max-width: 767px) {
+@media (max-width: ($nav-breakpoint - 1)) {
+  // show mobile nav
+  .mobile-navigation {
+    display: block;
+  }
+  // hide desktop nav
+  .main-navigation {
+    display: none;
+  }
   .nav-toggle {
     position: absolute;
+    // to center toggle in navbar:
+    // top w/ Logo, depends on height of logo
+    // top w/ Site Title and Tagline, use:
+    //top: 3.25rem;
+    // top w/ Site Title only
     top: 2.25rem;
     right: 2rem;
     display: block;
@@ -88,14 +141,14 @@
     background: none;
     border: none;
     padding: 0;
-    // default outline looks bad, try to improve without ruining accessibility
-    // ideally for keyboard only, not mouse selection
-    // applies to chrome, and ...?
-    &:focus,
-    &:active {
-      outline: none;
-      //border: .1rem dotted $light-gray-02;
-    }
+    // default outline not ideal, try to improve without ruining accessibility
+    // ideally solution for keyboard only, not mouse selection
+    // nav toggle is for mobile only (no keyboard tabbing), so not a big issue
+    //&:focus,
+    //&:active {
+    //  outline: none;
+    //  border: .1rem dotted $light-gray-02;
+    //}
   }
   .nav-toggle-text {
     display: inline-block;
@@ -128,27 +181,128 @@
       background-color: $main-nav-color;
     }
   }
-
-  .main-navigation ul {
+  .mobile-navigation ul {
     margin-bottom: 1em;
   }
 }
 // tablet and up, header & nav styles
-@media screen and (min-width: 768px) {
-  .brand {
+@media screen and (min-width: $nav-breakpoint) {
+  // hide mobile nav & toggle
+  .mobile-navigation {
+    display: none;
+  }
+  // show desktop nav
+  .main-navigation {
+    // need to add margin with a custom logo
+    //margin-top: 1em;
+    display: block;
+  }
+  .brand,
+  .custom-logo,
+  .site-description {
     float: left;
   }
   .nav-toggle {
     display: none;
   }
-  .main-navigation {
+  .main-navigation,
+  .main-navigation div
+  {
     float: right;
-    ul {
+    > ul {
       @include list-inline;
       margin-bottom: 0;
     }
     li {
       padding-top: 0;
     }
+    .sub-menu a,
+    .children a {
+      color: $sub-menu-color;
+      background-color: $sub-menu-bg-color;
+      &:hover,
+      &:focus {
+        color: $sub-menu-color;
+        background-color: lighten($sub-menu-bg-color, 20%);
+      }
+    }
+    .sub-menu li,
+    .children li {
+      text-transform: none;
+      border-bottom: $sub-menu-brdr solid $sub-menu-brdr-color;
+    }
+    // current/active menu style
+    li.current-menu-item > a,
+    li.current_page_item > a {
+      color: $main-nav-active;
+      //border-bottom: .2rem solid $main-nav-active;
+    }
+  }
+  // Make sure sub navigation items are the right color when scrolled with transparent header
+  .body--transparent-header .site-header.scrolled .main-navigation {
+    .sub-menu a,
+    .children a {
+      color: $sub-menu-color;
+      &:hover,
+      &:focus {
+        color: $sub-menu-color;
+      }
+    }
+  }
+  .menu-item-has-children,
+  .page_item_has_children {
+    position: relative;
+  }
+  // Use right angle for sub menu items, desktop
+  .menu-item-has-children .menu-item-has-children > a::after,
+  .page_item_has_children .page_item_has_children > a::after {
+    content: "\f105";
+  }
+
+  .main-navigation .sub-menu,
+  .main-navigation .children {
+    display: none;
+    position: absolute;
+    top: 2em;
+    width: 16rem;
+    background-color: $header-bg-color;
+    li {
+      text-align: left;
+    }
+  }
+  .main-navigation .sub-menu a,
+  .main-navigation .children a {
+    display: block;
+  }
+  // display sub menu on hover
+  // focus-within not fully supported, edge 18 https://caniuse.com/#feat=css-focus-within
+  // ultimately need full support, or JS solution
+  .menu-item-has-children:hover,
+  .menu-item-has-children:focus-within,
+  .page_item_has_children:hover,
+  .page_item_has_children:focus-within {
+    > .sub-menu,
+    > .children {
+      display: block;
+    }
+  }
+  // position 2nd level (and greater) menus
+  .main-navigation .sub-menu .sub-menu,
+  .main-navigation .children .children {
+    top: 0;
+    left: 16rem;
+  }
+  // focus styles need some JS to make menu stay open
+  // doesn't stay focused with just CSS
+  // open the sub menu on keyboard focus
+  //.menu-item-has-children a:focus {
+  //  + .sub-menu {
+  //    display: block;
+  //  }
+  //}
+  // menu open class applied with JS
+  .sub-menu.open,
+  .children.open {
+    display: block;
   }
 }

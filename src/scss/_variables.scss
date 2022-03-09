@@ -1,19 +1,15 @@
 // shades of gray (.gray-10 = 10% gray, etc.)
-$gray-10: lighten(black,90%);
-$gray-20: lighten(black,80%);
-$gray-30: lighten(black,70%);
-$gray-40: lighten(black,60%);
-$gray-50: lighten(black,50%);
-$gray-60: lighten(black,40%);
-$gray-70: lighten(black,30%);
-$gray-80: lighten(black,20%);
-$gray-90: lighten(black,10%);
+$gray-10: lighten(black, 90%);
+$gray-20: lighten(black, 80%);
+$gray-30: lighten(black, 70%);
+$gray-40: lighten(black, 60%);
+$gray-50: lighten(black, 50%);
+$gray-60: lighten(black, 40%);
+$gray-70: lighten(black, 30%);
+$gray-80: lighten(black, 20%);
+$gray-90: lighten(black, 10%);
 
 // various colors
-$magenta: magenta;
-$yellow: yellow;
-$lime: lime;
-$navy: #000080;
 $light-gray-01: #eaeaea;
 $light-gray-02: #d3d3d3;
 $light-gray-03: #cccccc;
@@ -24,62 +20,103 @@ $dark-gray-01: #2e2e2e;
 $dark-gray-02: #1e1e1e;
 // etc.
 
-// theme colors
-$lime-green: #32cd32;
-$forest-green: #228b22;
-$medium-blue: #0000cd;
-// etc.
+// Theme colors
+$alabaster: #FFFFFF;
+$mint: #75CC6C;
+$sea-foam: #2F835F;
+$slate: #6E7E93;
+$storm: #233550;
+$rock: #212833;
 
-// functional color names
-$accent: $lime-green;
-$link-color: $medium-blue;
-$link-hover: lighten($link-color, 15%);
-$skiplink-bg: #fff;
+$brand: $sea-foam;
+$brand-hover: lighten($brand, 10%);
+$accent: $mint;
+$accent-light: $mint;
+$accent-dark: $slate;
+$light: $alabaster;
+$dark: $rock;
 
-$copy-color: $dark-gray-01;
-$heading-color: $dark-gray-01;
-$footer-txt-color: $copy-color;
+// text
+$copy-color: $dark;
+$heading-color: $copy-color;
+$footer-txt-color: $light;
+$pre-bg-color: $light-gray-01;
 
-$page-bg-color: $light-gray-01;
-$header-bg-color: #fff;
-$footer-bg-color: #fff;
-$table-head-bg-color: #fff;
-$table-border-color: $light-gray-04;
+// page section backgrounds
+$page-bg-color: $light;
+$header-bg-color: $light;
+$footer-bg-color: $dark;
+$bg-primary: $light;
+$bg-alt: $accent-dark;
+$bg-highlight: $accent-light;
+$hero-bg: rgba($dark, .5);
 
-$main-nav-color: $dark-gray-01;
-$main-nav-color--transparent-header: #fff;
-$main-nav-hover: $accent;//lighten($main-nav-color, 10%);
+// links
+$link-color: $brand;
+$link-hover: $brand-hover;
+$link-visited: $brand;
+$skiplink-bg: $light;
+$footer-link-color: $light;
+$footer-link-hover: $link-hover;
+// link underline
+$text-decoration-global: underline;
+$text-decoration-footer: underline;
 
-$btn-txt-color: #fff;
-$btn-bg-color: $dark-gray-01;
-$btn-inverse-txt-color: $dark-gray-01;
-$btn-inverse-border-color: $dark-gray-01;
+// main navigation
+$main-nav-color: $copy-color;
+$main-nav-color--transparent-header: $light;
+$main-nav-hover: $brand-hover;
+$main-nav-active: $brand-hover;
+$sub-menu-color: $light;
+$sub-menu-bg-color: $dark;
+$sub-menu-brdr: 0;
+$sub-menu-brdr-color: lighten($sub-menu-bg-color, 10%);
+$brand-txt-color: $copy-color;
+$brand-txt-hover: $brand-hover;
+$main-nav-btn-hover: $light;
+$main-nav-btn-hover-bg: $brand;
 
-$form-input-outline-color: $gray-20;
-$form-input-outline-hover: darken($form-input-outline-color,20%);
-
-$bg-primary: #fff;
-$bg-alt: $light-gray-02;
-$bg-highlight: $accent;
-
-$column-padding: 1rem;
-$column-bottom-margin-mobile: 1.6rem;
-
+// buttons
+$btn-txt-color: $light;
+$btn-bg-color: $brand;
+$btn-bg-color-hover: lighten($btn-bg-color, 5%);
+$btn-outline-txt-color: $copy-color;
+$btn-outline-border-color: $copy-color;
+$btn-outline-color-hover: lighten($btn-outline-border-color, 5%);
+$btn-alt-txt-color: $light;
+$btn-alt-bg-color: $dark;
 $btn-border-width: .2rem;
 $btn-border-radius: 0;
 
-$max-container-width: 1200px;
+// forms, tables, borders
+$form-input-color: $copy-color;
+$form-input-outline-color: $light-gray-02;
+$form-input-outline-hover: darken($form-input-outline-color, 20%);
+$form-required-color: red;
+$table-head-bg-color: $light;
+$table-border-color: $light-gray-01;
 
-// mq breakpoints
+// columns - for custom grid
+$column-padding: 1rem;
+$column-bottom-margin-mobile: 1.6rem;
 
-// font import
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400italic,600,700');
-//@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700');
-//@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400italic,500,700');
-//@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,400italic,600,700');
-//@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
-//@import url('https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700');
-//@import url('https://fonts.googleapis.com/css?family=Droid+Sans:400,700');
+// other settings
+$header-shadow: false;
+
+// Bootstrap breakpoints, except 2xl+
+// xs < 576
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-2xl: 1400px;
+$breakpoint-3xl: 1600px;
+$breakpoint-4xl: 1800px;
+
+// widths & media queries
+$max-container-width: $breakpoint-xl;
+$max-container-width-header: $max-container-width;
+$nav-breakpoint: $breakpoint-lg;
 
 // type
 $sans-default: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -94,11 +131,3 @@ $sans: $sans-custom, $sans-default;
 // Note: Typekit includes a sans-serif fallback, no need to specify fallback here, example --
 // $futura: "futura-pt";
 // may need to increase font size with Typekit fonts
-
-// old font stacks
-// "Helvetica Neue", Helvetica, Geneva, Arial, sans-serif;
-// "Lucida Grande", Lucida, Verdana, sans-serif;
-// "Times New Roman", Times, serif;
-// Georgia, serif;
-// "Courier New", Courier, monospace;
-// "Lucida Console", Monaco, monospace;

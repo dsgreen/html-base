@@ -17,8 +17,6 @@
  *    causes content to wrap 1 word per line:
  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
-
-// renamed from 'visuallyhidden'
 @mixin sr-only {
   border: 0;
   clip: rect(0 0 0 0);
@@ -30,7 +28,9 @@
   width: 1px;
   white-space: nowrap; /* 1 */
 }
-.sr-only {
+.sr-only,
+.visuallyhidden,
+.screen-reader-text {
   @include sr-only;
 }
 
@@ -39,8 +39,6 @@
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
-// renamed from '.visuallyhidden.focusable'
 @mixin sr-only-focusable {
   &:active,
   &:focus {
@@ -53,7 +51,9 @@
     white-space: inherit;
   }
 }
-.sr-only-focusable {
+.sr-only-focusable,
+.sr-only.focusable,
+.visuallyhidden.focusable {
   @include sr-only-focusable;
 }
 

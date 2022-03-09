@@ -3,22 +3,27 @@
   padding-bottom: 2rem;
   background-color: $header-bg-color;
 
+  // text only styles for .brand, no logo
   .brand {
     margin: 0;
     padding: 0;
-    // text only styles for .brand, no logo
     font-size: 1.8rem;
     font-weight: 400;
     letter-spacing: .05em;
     text-transform: uppercase;
-    @include link-color($dark-gray-01, $accent);
+    @include link-color($brand-txt-color, $brand-txt-hover);
   }
   .logo {
     width: 220px;
     height: auto;
   }
-  // make header span full browser width
+  // site tagline
+  .site-description {
+    color: $brand-txt-color;
+  }
+  // set variable to none to make header span full browser width
   .container {
+    //max-width: $max-container-width-header;
     max-width: none;
   }
 }
@@ -26,10 +31,14 @@
   background-color: transparent;
 
   .brand {
-    @include link-color($main-nav-color--transparent-header, $accent);
+    @include link-color($main-nav-color--transparent-header, $brand-txt-hover);
+  }
+  .site-description {
+    color: $main-nav-color--transparent-header;
   }
 
   // mobile menu is open
+  // move this to a media query
   &.toggled {
     background-color: rgba(0,0,0,.92);
   }
@@ -38,9 +47,32 @@
   &.scrolled {
     background-color: $header-bg-color;
     .brand {
-      @include link-color($dark-gray-01, $accent);
+      @include link-color($brand-txt-color, $brand-txt-hover);
+    }
+    .site-description {
+      color: $brand-txt-color;
     }
   }
 
-  transition: background-color .2s ease;
+  transition: background-color .4s ease;
+}
+
+// custom logo, title & description classes
+// .site-title, .site-description classes needed for customization options
+// (Display site title and tagline checkbox)
+// zero out paragraph margins
+.site-title {
+  margin: 0;
+}
+.site-description {
+  display: block;
+  clear: both;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.custom-logo {
+  display: inline-block;
+  max-width: 200px;
+  height: auto;
 }

@@ -6,4 +6,12 @@
   p {
     font-size: 1.3rem;
   }
+  a {
+    text-decoration: $text-decoration-footer;
+    color: $footer-link-color;
+  }
+  a:hover,
+  a:focus {
+    color: $footer-link-hover;
+  }
 }

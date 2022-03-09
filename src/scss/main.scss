@@ -4,8 +4,11 @@
 
 */
 
+// config
 @import "variables";
 @import "vendor/normalize";
+
+// mixins
 @import "mixins/utils";
 @import "mixins/lists";
 @import "mixins/links";
@@ -13,25 +16,30 @@
 @import "mixins/buttons";
 @import "mixins/visibility";
 
+// defaults
 @import "base/defaults";
 @import "base/type";
 @import "base/forms";
 
+// main structure
 @import "components/containers";
 @import "components/header";
 @import "components/header-fixed";
 @import "components/footer";
 @import "components/navigation";
+
+// components & parts
 @import "components/buttons";
 @import "components/skiplink";
 @import "components/hero";
-@import "components/grid-float";
+//@import "components/grid-float";
 
+// classes
 @import "classes/presentational";
 @import "classes/alignment";
 
 // site styles
-//@import "site/debug";
 @import "site/home";
 @import "site/sub-page";
 @import "site/demo";
+//@import "site/debug";

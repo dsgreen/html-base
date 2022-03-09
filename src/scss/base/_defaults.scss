@@ -1,9 +1,10 @@
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -15,21 +16,23 @@ body {
 // headings, other
 h1, h2, h3, h4, h5, h6,
 th,
-//th a,
 legend {
   color: $heading-color;
 }
 
 // links, buttons
 a,
-a:link,
-a:active,
-a:visited {
+a:link {
   color: $link-color;
+  text-decoration: $text-decoration-global;
 }
 a:hover,
+a:active,
 a:focus {
   color: $link-hover;
+}
+a:visited {
+  color: $link-visited;
 }
 a,
 .btn,
@@ -40,7 +43,6 @@ a,
 // https://github.com/h5bp/html5-boilerplate/blob/6.1.0/src/css/main.css
 /*
  * Remove text-shadow in selection highlight: HTML5 Boilerplate
- * These selection declarations have to be separate.
  * Customize the background color to match your design.
  */
 ::selection {
@@ -90,10 +92,22 @@ textarea {
   resize: vertical;
 }
 
-abbr[title] {
+abbr[title],
+acronym[title] {
   text-decoration: none;
   border-bottom: .1rem dotted $gray-40;
 }
-abbr[title]:hover {
+abbr[title]:hover,
+acronym[title]:hover {
   cursor: help;
+}
+
+figure,
+figcaption {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  @include img-responsive;
 }

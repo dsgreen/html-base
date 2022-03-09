@@ -1,10 +1,11 @@
 // home page styles
 .hero--sub {
-  @include hero-bg-img('../images/hero.jpg');
+  @include hero-bg-img;
+  //background-image: url("../images/hero.jpg");
+
   padding-top: 4em;
   padding-bottom: 5em;
   h1 {
-    text-transform: uppercase;
     color: #fff;
   }
 }
